@@ -1,0 +1,11 @@
+apiVersion: 1
+
+apps:
+  - type: 'hugohaggmark-useplugincomponentrepro-app'
+    org_id: 1
+    org_name: 'hugohaggmark'
+    disabled: false
+    jsonData:
+      apiUrl: http://default-url.com
+    secureJsonData:
+      apiKey: secret-key

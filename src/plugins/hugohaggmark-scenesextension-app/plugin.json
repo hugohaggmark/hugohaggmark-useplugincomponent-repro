@@ -1,0 +1,44 @@
+{
+  "$schema": "https://raw.githubusercontent.com/grafana/grafana/main/docs/sources/developers/plugins/plugin.schema.json",
+  "type": "app",
+  "name": "C App",
+  "id": "hugohaggmark-scenesextension-app",
+  "preload": true,
+  "info": {
+    "keywords": ["app"],
+    "description": "Will extend root app with ui extensions",
+    "author": {
+      "name": "Myorg"
+    },
+    "logos": {
+      "small": "img/logo.svg",
+      "large": "img/logo.svg"
+    },
+    "screenshots": [],
+    "version": "%VERSION%",
+    "updated": "%TODAY%"
+  },
+  "includes": [
+    {
+      "type": "page",
+      "name": "Default",
+      "path": "/a/hugohaggmark-scenesextension-app",
+      "role": "Admin",
+      "addToNav": false,
+      "defaultNav": false
+    }
+  ],
+  "extensions": {
+    "exposedComponents": [
+      {
+        "id": "hugohaggmark-scenesextension-app/object-detail-extension/v1",
+        "title": "Object Detail Extension",
+        "description": "Metrics details for various objects"
+      }
+    ]
+  },
+  "dependencies": {
+    "grafanaDependency": ">=10.3.3",
+    "plugins": []
+  }
+}
